@@ -14,6 +14,8 @@ public class ContactHandler {
                 }
          }
       }  
+
+      //i am very soorrry for this code, i will try to improve it in future.
     public static void populateConCountOnAcc(List<Contact> deletedConList){
         List<Account> AccToBeUpdated = new List<Account>();
         Set<Id> AccountIds = new Set<Id>();
