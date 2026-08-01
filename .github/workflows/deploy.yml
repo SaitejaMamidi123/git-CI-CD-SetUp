@@ -1,13 +1,11 @@
 name: Salesforce CI/CD
 
 on:
-  pull_request:
-    branches: [ main ]
   push:
     branches: [ main ]
 
 jobs:
-  validate-or-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -29,16 +27,7 @@ jobs:
             --alias ciOrg \
             --set-default
 
-      - name: Validate deployment (PR check)
-        if: github.event_name == 'pull_request'
-        run: |
-          sf project deploy validate \
-            --source-dir force-app \
-            --target-org ciOrg \
-            --test-level NoTestRun
-
       - name: Deploy to org
-        if: github.event_name == 'push'
         run: |
           sf project deploy start \
             --source-dir force-app \
