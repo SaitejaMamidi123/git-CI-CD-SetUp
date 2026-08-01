@@ -4,7 +4,7 @@ public class Demo {
         
         List<opportunity> oppList = new List<opportunity>();
     	List<Account> accList = [Select id, name from account where name = 'Saiteja12345'];
-        // Testing CI/CD PR validation flow
+        
         if(!accList.isEmpty()){
             for(Account acc : accList){
                 Opportunity opp = new Opportunity();

@@ -30,4 +30,15 @@ private class SoftphoneProviderControllerTest {
         SoftphoneProviderHelper.CallResult actualResult = (SoftphoneProviderHelper.CallResult) JSON.deserialize(SoftphoneProviderController.call('TwilioProvider', 'account', 'token', 'toNumber', 'fromNumber'),SoftphoneProviderHelper.CallResult.class);
         System.assert(JSON.serialize(expectedResult).equals(JSON.serialize(actualResult)), 'Result should contain status TWILIO_IS_NOT_INSTALLED');
     }
+
+    private static testMethod void testUnsupportedProvider_returnsNotSupported() {
+        // Call with a class name that does not exist -> provider == null -> NOT_SUPPORTED branch
+        SoftphoneProviderHelper.CallResult actualResult = (SoftphoneProviderHelper.CallResult)
+            JSON.deserialize(
+                SoftphoneProviderController.call('NonExistentProvider', 'account', 'token', 'toNumber', 'fromNumber'),
+                SoftphoneProviderHelper.CallResult.class
+            );
+        System.assertEquals('NOT_SUPPORTED', actualResult.status, 'Unknown provider should return NOT_SUPPORTED');
+        System.assert(actualResult.error.contains('NonExistentProvider'), 'Error message should mention the provider class name');
+    }
 }
