@@ -35,7 +35,7 @@ public with sharing class AccountHandler {
      *              consumes one of the 100 synchronous SOQL governor-limit slots.
      * @return Account The first matching record, or null when none exists.
      */
-    public static Account getAccountRecord() {
+    public static Account getAccountRecords() {
         List<Account> records = [
             SELECT Id, Name, Industry
             FROM   Account
