@@ -1,0 +1,104 @@
+[33mcommit 02f8e217355184601f6f1acc7f02f0d542dcb200[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mbbc[m[33m, [m[1;31morigin/bbc[m[33m)[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sun Aug 2 03:07:01 2026 +0530
+
+    all data
+
+[33mcommit 561e85ec8d2521b611475b5be13cec70d116e58d[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sun Aug 2 01:12:29 2026 +0530
+
+    tsting 2
+
+[33mcommit 91350bb775e872b746363f06d59f6168723c1870[m[33m ([m[1;32mmain[m[33m)[m
+Merge: 4c48f02 e2beb90
+Author: SaitejaMamidi123 <sai.ms1026@gmail.com>
+Date:   Sun Aug 2 00:53:45 2026 +0530
+
+    Merge pull request #3 from SaitejaMamidi123/nbk
+    
+    rcugchf
+
+[33mcommit e2beb908ac691fefde8ea29192f26cf733e4f94e[m[33m ([m[1;31morigin/nbk[m[33m)[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sun Aug 2 00:50:42 2026 +0530
+
+    rcugchf
+
+[33mcommit 4c48f029ffde3ec3db471530004a2e6e6dcac66d[m
+Merge: f9a6cf8 4affcdf
+Author: SaitejaMamidi123 <sai.ms1026@gmail.com>
+Date:   Sun Aug 2 00:37:30 2026 +0530
+
+    Merge pull request #2 from SaitejaMamidi123/new
+    
+    testing deploying a class
+
+[33mcommit f9a6cf826ea33ed2e9719a5f3b02b111f290e688[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sun Aug 2 00:33:06 2026 +0530
+
+    Simplify workflow: deploy only, no test validation
+
+[33mcommit 4affcdf701e9914dc766086ff1070071fcb8ee0d[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sun Aug 2 00:26:39 2026 +0530
+
+    testing deploying a class
+
+[33mcommit f2cb53e6d128e4c3f00130845a41591a9cde90d8[m
+Merge: da01213 3ce8108
+Author: SaitejaMamidi123 <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 22:29:05 2026 +0530
+
+    Merge pull request #1 from SaitejaMamidi123/feature/test-pr-flow
+    
+    Test PR validation flow and restore RunLocalTests
+
+[33mcommit 3ce8108a941886e7da6a1d6bd69629b26f1ffcc7[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 22:23:33 2026 +0530
+
+    Revert to NoTestRun until trigger test coverage is added
+
+[33mcommit 0da83314460e4941f37441f09e7244b7889540aa[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 22:18:03 2026 +0530
+
+    Test PR validation flow and restore RunLocalTests
+
+[33mcommit da012134f6be27dcd5ee0e96fe2396799f256995[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 22:14:15 2026 +0530
+
+    Fix AccountHandler.getAccountRecords return type
+
+[33mcommit 8746c2a43f9ed142500ae8846f7f4f790d0823d4[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 22:00:40 2026 +0530
+
+    Skip test execution in CI/CD for now
+
+[33mcommit 9079a4030e5a50419b8820933f49c527350f3445[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 21:53:47 2026 +0530
+
+    Add GitHub Actions CI/CD workflow
+
+[33mcommit fb13d1cc6e9e0cb1d6d8e5bc5206ce530b48bf13[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 17:26:58 2026 +0530
+
+    Ignore certificate files
+
+[33mcommit 411d4e0428ebe890d28f9a30f2dc58637dab51f3[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 14:27:36 2026 +0530
+
+    commiting classes
+
+[33mcommit 0ac169b985b85fd0efa6819969baf16d3d13d05e[m
+Author: saiteja <sai.ms1026@gmail.com>
+Date:   Sat Aug 1 14:18:23 2026 +0530
+
+    initial commit
