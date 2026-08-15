@@ -144,7 +144,6 @@ public with sharing class AccountHandler {
                 continue;
             }
             for (Opportunity opp : acc.Opportunities) {
-                // Update the existing SObject in-place — avoids unnecessary object allocation
                 opp.Phone__c = acc.Phone;
                 oppList.add(opp);
             }
