@@ -2,8 +2,34 @@
 public class CaseReaderSharingTest {
    @isTest
    static void testCaseVisibilityForUsers() {
-       User user1 = [SELECT Id, Username FROM User WHERE Username = 'sathvikaperuka9088@gmail.com' LIMIT 1];
-       User user2 = [SELECT Id, Username FROM User WHERE Username = 'sathvikaperuka12345@gmail.com' LIMIT 1];
+       Profile standardProfile = [SELECT Id FROM Profile WHERE Name = 'Standard User' LIMIT 1];
+
+       User user1 = new User(
+           Alias = 'u1',
+           Email = 'user1.caseviewer@example.com',
+           EmailEncodingKey = 'UTF-8',
+           LastName = 'UserOne',
+           LanguageLocaleKey = 'en_US',
+           LocaleSidKey = 'en_US',
+           ProfileId = standardProfile.Id,
+           TimeZoneSidKey = 'America/Los_Angeles',
+           UserName = 'user1.caseviewer.' + System.currentTimeMillis() + '@example.com'
+       );
+
+       User user2 = new User(
+           Alias = 'u2',
+           Email = 'user2.caseviewer@example.com',
+           EmailEncodingKey = 'UTF-8',
+           LastName = 'UserTwo',
+           LanguageLocaleKey = 'en_US',
+           LocaleSidKey = 'en_US',
+           ProfileId = standardProfile.Id,
+           TimeZoneSidKey = 'America/Los_Angeles',
+           UserName = 'user2.caseviewer.' + System.currentTimeMillis() + '@example.com'
+       );
+
+       insert new List<User>{ user1, user2 };
+
        System.runAs(user1) {
            List<List<Case>> withShareResult1 = CaseReader.getCases();
            List<List<Case>> withoutShareResult1 = CaseReaderWithoutShare.getCases();
@@ -13,6 +39,7 @@ public class CaseReaderSharingTest {
            System.debug('CaseReader (with sharing) record count: ' + withShareCount1);
            System.debug('CaseReaderWithoutShare (without sharing) record count: ' + withoutShareCount1);
        }
+
        System.runAs(user2) {
            List<List<Case>> withShareResult2 = CaseReader.getCases();
            List<List<Case>> withoutShareResult2 = CaseReaderWithoutShare.getCases();
