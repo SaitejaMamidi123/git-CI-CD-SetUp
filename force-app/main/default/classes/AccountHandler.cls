@@ -130,7 +130,6 @@ public with sharing class AccountHandler {
         for (Account acc : accList) {
             accIds.add(acc.Id);
         }
-        // Query all Accounts with their child Opportunities in one go
 
         List<Account> accountsWithOpps = [
             SELECT Id, Phone,
